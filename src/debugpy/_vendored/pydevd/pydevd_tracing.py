@@ -153,13 +153,13 @@ def get_python_helper_lib_filename():
         suffix_32 = 'x86'
 
     elif IS_LINUX:
-        if arch not "amd64":
-            extension = '.so'
-            suffix_64 = 'aarch64'
-        elif
+        if not arch:
             extension = '.so'
             suffix_64 = 'amd64'
             suffix_32 = 'x86'
+        elif
+            extension = '.so'
+            suffix_64 = 'aarch64'
 
     elif IS_MAC:
         extension = '.dylib'
