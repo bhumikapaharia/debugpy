@@ -169,7 +169,7 @@ def get_target_filename(is_target_process_64=None, prefix=None, extension=None):
         suffix_32 = 'x86'
 
     elif IS_LINUX:
-        if arch not "amd64":
+        if not arch "amd64":
             extension = '.so'
             suffix_64 = 'aarch64'
         elif
