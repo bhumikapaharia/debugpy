@@ -157,7 +157,7 @@ def get_python_helper_lib_filename():
             extension = '.so'
             suffix_64 = 'amd64'
             suffix_32 = 'x86'
-        elif
+        else
             extension = '.so'
             suffix_64 = 'aarch64'
 
