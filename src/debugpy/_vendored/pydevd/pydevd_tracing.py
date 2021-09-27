@@ -160,6 +160,7 @@ def get_python_helper_lib_filename():
         else
             extension = '.so'
             suffix_64 = 'aarch64'
+        fi
 
     elif IS_MAC:
         extension = '.dylib'
