@@ -173,7 +173,7 @@ def get_target_filename(is_target_process_64=None, prefix=None, extension=None):
             extension = '.so'
             suffix_64 = 'amd64'
             suffix_32 = 'x86'
-        else
+        else:
             extension = '.so'
             suffix_64 = 'aarch64'
 
