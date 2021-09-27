@@ -515,8 +515,10 @@ def test_breakaway_job(pyfile, target, run):
         parent_session.config.update({
             "redirectOutput": False,
             "subProcess": False,
-            print("redirectOutput")
-            print("subProcess)")
+            print("#####################################")
+            print("The value is:", redirectOutput)
+            print("The value is:",subProcess)
+            print("#####################################")
         })
         parent_session.expected_exit_code = some.int
         backchannel = parent_session.open_backchannel()
@@ -532,7 +534,9 @@ def test_breakaway_job(pyfile, target, run):
 
         # child should still be running
         backchannel.send("proceed")
-        print("backchannel.receive()")
+        print("#####################################")
+        print("The value is:", backchannel.receive())
+        print("#####################################")
         assert backchannel.receive() == "ok"
 
     log.info("Waiting for child process...")
