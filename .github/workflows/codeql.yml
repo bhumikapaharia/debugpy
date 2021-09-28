@@ -53,6 +53,6 @@ jobs:
               apt-get -y install gdb && \
               sysctl kernel.yama.ptrace_scope=0 && \
               pip install -U pip setuptools tox tox-travis && \
-              tox -e py38 && \
+              tox -- -n4 -v && \
  
               deactivate'
