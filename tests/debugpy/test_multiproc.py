@@ -516,6 +516,10 @@ def test_breakaway_job(pyfile, target, run):
             "redirectOutput": False,
             "subProcess": False,
             print("#####################################")
+            value1=redirectOutput
+            print("value1 is {value1}")
+            value2=subProcess
+            print("value2 is {value2}")
             print("The value is:", redirectOutput)
             print("The value is:",subProcess)
             print("#####################################")
@@ -535,6 +539,8 @@ def test_breakaway_job(pyfile, target, run):
         # child should still be running
         backchannel.send("proceed")
         print("#####################################")
+        value=backchannel.receive()
+        print("value is {value}")
         print("The value is:", backchannel.receive())
         print("#####################################")
         assert backchannel.receive() == "ok"
